@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="gridLength.ImagePopup"
+				 xmlns:pages="clr-namespace:Mopups.Pages;assembly=Mopups">
+	<Grid BackgroundColor="Black"
+		  RowSpacing="0"
+		  ColumnSpacing="0">
+		
+		<Image 
+            x:Name="image"
+            Source="dotnet_bot.png"
+               HeightRequest="185"
+               Aspect="AspectFit" />
+               
+        <Grid WidthRequest="60"
+			  HeightRequest="60"
+			  VerticalOptions="Start"
+			  HorizontalOptions="End">
+			<BoxView Color="#99000000"
+					 WidthRequest="40"
+					 HeightRequest="40"
+					 Grid.Row="0"
+					 CornerRadius="20"
+					 VerticalOptions="Center"
+					 HorizontalOptions="Center" />
+			<Label TextColor="White"
+				   Text="X"
+				   VerticalOptions="Center"
+				   HorizontalOptions="Center"
+				   FontSize="26">
+			</Label>
+			<Grid.GestureRecognizers>
+				<TapGestureRecognizer Tapped="Close" />
+			</Grid.GestureRecognizers>
+		</Grid>
+    </Grid>
+</pages:PopupPage>
